@@ -1,7 +1,7 @@
 services:
   ratings:
     build: "../ratings/"
-    image: ghcr.io/drd4n/bookinfo-ratings:dev
+    image: ghcr.io/drd4n/bookinfo-ratings:prd
     ports:
       - "8080:8080"
     environment:
@@ -11,7 +11,7 @@ services:
       MONGO_DB_PASSWORD: CHANGEME
   reviews:
     build: .
-    image: ghcr.io/drd4n/bookinfo-reviews:dev
+    image: ghcr.io/drd4n/bookinfo-reviews:prd
     ports:
       - "8082:9080"
     environment:
